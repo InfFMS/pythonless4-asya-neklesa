@@ -25,4 +25,4 @@ def number_to_words(n):
                 print(u[i])
     else:
         print(d[n//10] + ' ' + e[n%10])
-number_to_words(n)
+
