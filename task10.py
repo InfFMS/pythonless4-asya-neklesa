@@ -18,12 +18,25 @@ def abc_a_b_c(abc):
         c = abc % 10
         a_b_c.append(c)
         abc = abc // 10
-    return a_b_c
+    return a_b_c #число перевернуто
 
-def convert_into_10base(num, from_base):
+def convert_into_10base(num, from_base, to_base):
     num = abc_a_b_c(num)
     l = len(num)
-    num10 = [l]
-    for i in range(0, l, -1):
-        num10[l - i] = num[i] * (from_base ** num[i])
-    
+    num_10 = [0]*l
+    num10 = 0
+    for i in range(0, l):
+        num_10[i] = num[i] * (from_base ** i)
+        num10 += num_10[i]
+    print(num10)
+
+
+def convert_from_10base(num, from_base, to_base):
+    l = len(num)
+    numx = [0]*l
+    i = 0
+    while num % to_base > to_base:
+        num % to_base = numx[i]
+        i += 1
+
+convert_into_10base( int(input()), int(input()) )

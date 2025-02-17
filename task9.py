@@ -4,24 +4,13 @@
 # Операцией возведения в степень пользоваться нельзя!
 # Задача на рекурсию!
 
-def degre2(n)
-    count = 0
-    while n % 2 == 0:
-        n = n // 2
-        count +=  1
-    if n == 1:
-        print("yes")
-    else:
-        print("no")
-
 def degree2(n):
-    while n % 2 == 0:
-        n /= 2
-        return n
-    return degree(n)
+    if n == 1:
+        print('yes')
+    elif n % 2 == 1:
+        print('no')
+    else:
+        return degree2(n // 2)
 
-degre2( int(input()) )
-if degree2( int(input()) ) == 1:
-    print('yes')
-else:
-    print('no')
+
+degree2( int(input()) )

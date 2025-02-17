@@ -4,11 +4,9 @@
 # со сторонами side1, side2, side3, или False в противном случае.
 
 def is_valid_triangle(side1, side2, side3):
-    if side3 + side2 > side2 and side3 + side1 > side2 and side1 + side2 > side3:
-        print(True)
+    if side3 + side2 > side1 and side3 + side1 > side2 and side1 + side2 > side3:
         return True
     else:
-        print(False)
         return False
 
 
