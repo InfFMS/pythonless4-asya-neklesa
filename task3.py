@@ -6,3 +6,44 @@
 # 2013
 # MMXIII
 
+def rome(n):
+    a = n//1000
+    b = ((n//100) % 10)
+    c = ((n//10) % 10)
+    d = n % 10
+
+    #первая цифра
+    q = ('M' * a)
+
+    #вторая цифра
+    if 9 > b > 4:
+        w = ('D' + (b - 5) * 'C')
+    elif b == 4:
+        w = ('CD')
+    elif b == 9:
+        w = ('CM')
+    else:
+        w = ('C' * b)
+    #пердпоследняя цифра
+    if 9 > c > 4:
+        e = ('L' + (c - 5) * 'X')
+    elif c == 4:
+        e = ('XL')
+    elif c == 9:
+        e = ('XC')
+    else:
+        e = ('X' * c)
+    #последняя цифра
+    if 9 > d > 4:
+        r = ('V' + (d - 5) * 'I')
+    elif d == 4:
+        r = ('IV')
+    elif d == 9:
+        r = ('IX')
+    else:
+        r = ('I' * d)
+
+
+    print(q+w+e+r)
+
+rome(int(input()))
