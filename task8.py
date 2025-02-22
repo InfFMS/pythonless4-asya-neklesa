@@ -20,8 +20,8 @@ def min_prime(n):
             return str(m)
     return ""
 
-print(min_prime( int(input()) ))
 
+print(min_prime(int(input())))
 
 # def prime_numbers(n):
 #     p = []
@@ -46,4 +46,3 @@ print(min_prime( int(input()) ))
 #
 #
 # pmn(int(input()))
-
